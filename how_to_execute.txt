@@ -1,0 +1,14 @@
+# Install python3-venv if not available
+# sudo apt update && sudo apt install -y python3-venv
+
+# Create virtual environment
+python3 -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Install PyTorch with CUDA 13.0 support
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+
+# Install other requirements
+pip install -r requirements.txt
